@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
   root 'welcome#index'
+  devise_for :clients, controllers: { sessions: 'clients/sessions'}
+
+  resources :cards
+
+  #resources :accounts
+
+  resources :branches do
+    resources :bankers
+  end
+
+  resources :clients do
+    resources :accounts
+  end
+
 
   resources :users
 

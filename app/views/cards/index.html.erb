@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pan</th>
+      <th>Expirydate</th>
+      <th>Limit</th>
+      <th>Managingcompany</th>
+      <th>Account</th>
+      <th>Status</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.PAN %></td>
+        <td><%= card.expiryDate %></td>
+        <td><%= card.limit %></td>
+        <td><%= card.managingCompany %></td>
+        <td><%= card.account_id %></td>
+        <td><%= card.status_id %></td>
+        <td><%= card.type_id %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @banker.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @banker.lastName %>
+</p>
+
+<p>
+  <strong>Mobilenumber:</strong>
+  <%= @banker.mobileNumber %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @banker.phoneNumber %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @banker.email %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @banker.branch_id %>
+</p>
+
+<%= link_to 'Edit', edit_banker_path(@banker) %> |
+<%= link_to 'Back', bankers_path %>

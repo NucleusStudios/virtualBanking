@@ -1,0 +1,69 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstName %><br>
+    <%= f.text_field :firstName %>
+  </div>
+  <div class="field">
+    <%= f.label :lastName %><br>
+    <%= f.text_field :lastName %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :streetNr %><br>
+    <%= f.text_field :streetNr %>
+  </div>
+  <div class="field">
+    <%= f.label :zipCode %><br>
+    <%= f.text_field :zipCode %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :birthDate %><br>
+    <%= f.date_select :birthDate %>
+  </div>
+  <div class="field">
+    <%= f.label :deathDate %><br>
+    <%= f.date_select :deathDate %>
+  </div>
+  <div class="field">
+    <%= f.label :birthPlace %><br>
+    <%= f.text_field :birthPlace %>
+  </div>
+  <div class="field">
+    <%= f.label :socialSecurityNumber %><br>
+    <%= f.text_field :socialSecurityNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :mobileNumber %><br>
+    <%= f.text_field :mobileNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :banker_id %><br>
+    <%= f.number_field :banker_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
